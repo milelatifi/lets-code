@@ -74,6 +74,7 @@ function Navbar() {
               my-1
               
           "
+                  alt=""
                 />
               </Link>
             </li>

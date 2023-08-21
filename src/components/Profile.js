@@ -7,8 +7,8 @@ const Profile = () => {
   const user = JSON.parse(localStorage.getItem('user'));
   // tash qitu e ki profile_picture
   return (
-    <div className="flex items-center justify-center h-screen bg-neutral-700">
-      <div className="bg-white shadow-md rounded p-8 w-800">
+    <div className="flex items-center justify-center h-screen bg-neutral-700 ">
+      <div className="bg-gradient-to-b from-neutral-300 to-neutral-200  shadow-md rounded-lg p-8 w-800">
         <h2 className="text-2xl font-bold mb-4">User Profile</h2>
         <div className="mb-4">
           <img
@@ -21,6 +21,7 @@ const Profile = () => {
             md:w-4/12   
             md:p-4
         "
+            alt=""
           />
         </div>
         <div className="mb-4">
@@ -32,15 +33,9 @@ const Profile = () => {
           </p>
         </div>
         <div className="flex justify-center space-x-4">
-          {/* <button
-            className="bg-black text-white py-2 px-4 rounded-lg"
-            onClick={() => {}}
-          >
-            Back
-          </button> */}
           <Link
             to={{ pathname: '/' }}
-            className="btn bg-black hover:bg-neutral-900 text-white"
+            className="btn  border rounded-lg bg-black hover:bg-neutral-900 text-white"
           >
             back
           </Link>

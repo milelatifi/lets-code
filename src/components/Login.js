@@ -34,8 +34,6 @@ const LoginPage = () => {
     const user = users.find(
       (user) => user.email === email && user.password === password
     );
-    // here na e qesim qet user si json n local storage me key user
-    // tash te profile
     if (user) {
       document.querySelector('.invalid-credentials').classList.add('hidden');
       setShowSuccessModal(true);
@@ -52,20 +50,20 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen  bg-neutral-700">
+    <div className="flex items-center justify-center h-screen  login">
       <form
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 w-1/3"
+        className="bg-gradient-to-b from-black to-neutral-800 shadow-md rounded px-8 pt-6 pb-8 w-1/3"
         onSubmit={handleSubmit}
       >
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="email"
           >
             Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-white placeholder-neutral-500 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
             id="email"
             type="email"
             placeholder="Email"
@@ -76,13 +74,13 @@ const LoginPage = () => {
         </div>
         <div className="mb-4">
           <label
-            className="block text-gray-700 text-sm font-bold mb-2"
+            className="block text-white text-sm font-bold mb-2"
             htmlFor="password"
           >
             Password
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded-lg w-full py-3 px-4  text-white placeholder-neutral-500 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
             id="password"
             type="password"
             placeholder="Password"
@@ -102,7 +100,7 @@ const LoginPage = () => {
         <div className="flex justify-center mt-4">
           <button
             type="submit"
-            className="bg-black hover:bg-neutral-800 text-white font-bold py-3 px-6 rounded-xl focus:outline-none focus:shadow-outline"
+            className="bg-black hover:bg-neutral-800  text-white  font-bold py-3 px-6 rounded-xl focus:outline-none focus:shadow-outline"
           >
             Sign in
           </button>
@@ -110,8 +108,8 @@ const LoginPage = () => {
       </form>
 
       {showSuccessModal && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-50 bg-black">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-50 login">
+          <div className="bg-white p-6 rounded-lg shadow-lg bg-gradient-to-b from-neutral-500 to-neutral-200 ">
             <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
             <p className="mb-4">You have successfully logged in!</p>
             <div className="flex justify-center space-x-4">
@@ -122,7 +120,7 @@ const LoginPage = () => {
                 OK
               </button>
               <button
-                className=" bg-blue-900 hover:bg-blue-700 text-white py-2 px-4 rounded-lg"
+                className=" bg-green-900 hover:bg-green-700 text-white py-2 px-4 rounded-lg"
                 onClick={() => {
                   window.location.href = '/profile';
                 }}

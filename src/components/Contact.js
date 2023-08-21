@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,24 +26,23 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center  bg-neutral-700 pt-10 pb-10">
+    <div className="flex justify-center items-center  pt-10 pb-10 contact">
       <div className="flex flex-col justify-center items-center ">
-        <form className="w-full max-w-lg  shadow-lg rounded-lg p-6 bg-white ">
+        <form className="w-full max-w-lg  shadow-lg rounded-lg p-6 bg-gradient-to-b from-black to-neutral-800 h-screen ">
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                 htmlFor="grid-first-name"
               >
                 First Name
               </label>
               <input
-                className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
+                className="appearance-none block w-full text-white placeholder-neutral-500 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
                 id="grid-first-name"
                 type="text"
                 placeholder="Mile"
-                // Set the value of the input to the corresponding state value
-                onChange={handleChange} // Use the handleChange function to handle changes
+                onChange={handleChange}
                 onSubmit={handleSubmit}
                 required
               />
@@ -50,13 +50,13 @@ const ContactForm = () => {
             </div>
             <div className="w-full md:w-1/2 px-3">
               <label
-                className="block uppercase tracking-wide text-black text-xs font-bold mb-2  "
+                className="block uppercase tracking-wide text-white text-xs font-bold mb-2  "
                 htmlFor="grid-last-name"
               >
                 Last Name
               </label>
               <input
-                className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
+                className="appearance-none block w-full  text-white placeholder-neutral-500 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
                 id="grid-last-name"
                 type="text"
                 placeholder="Latifi"
@@ -67,13 +67,13 @@ const ContactForm = () => {
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide  text-black text-xs font-bold mb-2 mt-2"
+                className="block uppercase tracking-wide  text-white text-xs font-bold mb-2 mt-2"
                 htmlFor="grid-email"
               >
                 Email
               </label>
               <input
-                className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
+                className="appearance-none block w-full  text-white  placeholder-neutral-500 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
                 id="grid-email"
                 type="email"
                 placeholder="milelatifi@example.com"
@@ -84,13 +84,13 @@ const ContactForm = () => {
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full px-3">
               <label
-                className="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
                 Password
               </label>
               <input
-                className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
+                className="appearance-none block w-full  text-white  placeholder-neutral-500 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
                 id="grid-password"
                 type="password"
                 placeholder="**********"
@@ -102,13 +102,13 @@ const ContactForm = () => {
           <div className="flex flex-wrap -mx-3 mb-5">
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label
-                className="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                 htmlFor="grid-city"
               >
                 City
               </label>
               <input
-                className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
+                className="appearance-none block w-full text-white placeholder-neutral-500 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
                 id="grid-city"
                 type="text"
                 placeholder="..."
@@ -117,14 +117,14 @@ const ContactForm = () => {
             </div>
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label
-                className="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                 htmlFor="grid-state"
               >
                 State
               </label>
               <div className="relative">
                 <select
-                  className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
+                  className="appearance-none block w-full b-gray-100 text-white border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
                   id="grid-state"
                 >
                   <option>Kosovo</option>
@@ -144,13 +144,13 @@ const ContactForm = () => {
             </div>
             <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
               <label
-                className="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                 htmlFor="grid-zip"
               >
                 Zip
               </label>
               <input
-                className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500"
+                className="appearance-none block w-full  text-white placeholder-neutral-500 border rounded-lg py-3 px-4 mb-1 leading-tight focus:outline-none  focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
                 id="grid-zip"
                 type="text"
                 placeholder="00000"
@@ -160,13 +160,13 @@ const ContactForm = () => {
           </div>
           <div className="w-full px-3 mb-2">
             <label
-              className="block uppercase tracking-wide text-black text-xs font-bold mb-4"
+              className="block uppercase tracking-wide text-white text-xs font-bold mb-4"
               htmlFor="grid-help"
             >
               How can we help you?
             </label>
             <input
-              className="appearance-none block w-full b-gray-100 text-gray-700 border rounded-lg py-10 px-10 mb-10 leading-tight focus:outline-none focus:bg-white  focus:border-gray-500 "
+              className="appearance-none block w-full  text-white placeholder-neutral-500 border rounded-lg py-10 px-10 mb-10 leading-tight focus:outline-none focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
               id="grid-help"
               type="text"
               placeholder="Please let us know how we can assist you."
@@ -176,7 +176,7 @@ const ContactForm = () => {
           <div className="flex justify-center mt-4">
             <button
               type="submit"
-              className="bg-black hover:bg-neutral-800 text-white font-bold py-3 px-6 rounded-xl focus:outline-none focus:shadow-outline"
+              className="bg-black hover:bg-neutral-900 text-white font-bold py-3 px-6 rounded-xl focus:outline-none focus:shadow-outline"
             >
               Submit
             </button>
