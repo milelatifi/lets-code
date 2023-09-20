@@ -16,7 +16,6 @@
 }
 
 .contact {
-  background-image: url('../public/images/code3.jpg');
   background-image: url('../public/images/background.webp');
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +26,6 @@
   margin: 0;
   padding: 0;
   background-image: url('../public/images/background.webp');
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

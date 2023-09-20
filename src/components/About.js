@@ -9,6 +9,7 @@ const AboutPage = () => {
             <div className="flex flex-col items-center">
               <h1 className="about-title text-lg font-bold mb-4 mt-4">
                 About LetsCode
+                
               </h1>
               <p className="about-text">
                 Welcome to LetsCode, the ultimate platform for developers to
