@@ -29,6 +29,9 @@ const SignupForm = () => {
   return (
     <div className="flex justify-center items-center  pt-10 pb-16 signup">
       <div className="flex flex-col justify-center items-center">
+        <div className="text-2xl  text-white mb-10 mt-10">
+          Register so you can be a part of us!
+        </div>
         <form
           className="w-full max-w-lg shadow-lg rounded-lg p-6 bg-gradient-to-b from-black to-neutral-800 "
           onSubmit={handleSubmit}
