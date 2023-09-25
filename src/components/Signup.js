@@ -27,7 +27,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center  pt-10 pb-10 signup">
+    <div className="flex justify-center items-center  pt-10 pb-16 signup">
       <div className="flex flex-col justify-center items-center">
         <form
           className="w-full max-w-lg shadow-lg rounded-lg p-6 bg-gradient-to-b from-black to-neutral-800 "

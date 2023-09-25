@@ -13,7 +13,11 @@ const PostsList = () => {
   }, []);
 
   return (
-    <div className="flex flex-row flex-wrap justify-center bg-neutral-800">
+    <div className="flex flex-row flex-wrap justify-center  bg-neutral-800 ">
+      <div className="w-full mt-10 mb-10 text-center ">
+        <h3 className="text-white text-2xl mt-5 ">Our community thoughts</h3>
+      </div>
+
       {posts.map((post) => (
         <Post key={post.id} id={post.id} title={post.title} body={post.body} />
       ))}

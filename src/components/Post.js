@@ -9,7 +9,6 @@ const Post = ({ id, title, body }) => {
   };
 
   return (
-    // <div className="flex flex-row flex-wrap">
     <div className="bg-gradient-to-b from-black to-neutral-600  rounded-lg shadow p-6 w-64 m-4">
       <h2 className="text-2xl text-gray-300 font-bold mb-6 mt-0">
         {title.substr(0, 40)}
@@ -26,7 +25,6 @@ const Post = ({ id, title, body }) => {
           See post
         </Link>
       </div>
-      {/* </div> */}
     </div>
   );
 };

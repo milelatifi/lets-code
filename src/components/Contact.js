@@ -158,20 +158,21 @@ const ContactForm = () => {
               />
             </div>
           </div>
-          <div className="w-full px-3 mb-2">
-            <label
-              className="block uppercase tracking-wide text-white text-xs font-bold mb-4"
-              htmlFor="grid-help"
-            >
-              How can we help you?
-            </label>
-            <input
-              className="appearance-none block w-full  text-white placeholder-neutral-500 border rounded-lg py-10 px-10 mb-10 leading-tight focus:outline-none focus:bg-neutral-800  focus:border-gray-500 bg-neutral-900 "
-              id="grid-help"
-              type="text"
-              placeholder="Please let us know how we can assist you."
-              required
-            />
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="w-full px-3 mb-2">
+              <label
+                className="block uppercase tracking-wide text-white text-xs font-bold mb-4"
+                htmlFor="grid-help"
+              >
+                How can we help you?
+              </label>
+              <textarea
+                rows="4"
+                className=" appearance-none block p-2.5 w-full  text-white placeholder-neutral-500   rounded-lg border bg-neutral-900  focus:outline-none focus:bg-neutral-800  focus:border-gray-500 "
+                placeholder="Please let us know how we can assist you."
+                required
+              ></textarea>
+            </div>
           </div>
           <div className="flex justify-center mt-4">
             <button
