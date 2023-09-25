@@ -25,7 +25,7 @@
 .about {
   margin: 0;
   padding: 0;
-  background-image: url('../public/images/background.webp');
+  background-image: url('../public/images/pexels-kampus-production-8636603.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -38,10 +38,8 @@
 
 .about-title {
   margin-bottom: 8px;
-  font-size: 30px;
   color: #ffffff;
-  font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
 }
 .about-text {
   font-size: 20px;
