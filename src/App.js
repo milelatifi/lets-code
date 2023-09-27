@@ -10,6 +10,7 @@ import LoginPage from './components/Login';
 import SignupForm from './components/Signup';
 import PostDetail from './components/PostDetail';
 import Profile from './components/Profile';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,33 +25,12 @@ function App() {
           <Route path="/log-in" element={<LoginPage />} />
           <Route path="/post/:id" element={<PostDetail />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
       </Router>
+      <Footer />
     </>
   );
 }
 
 export default App;
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import './App.css';
-
-// // Import your components for different routes (e.g., Home, About, etc.)
-// import Home from './components/Home';
-
-// function App() {
-//   return (
-//     <>
-//       <Router>
-//         <Navbar />
-//         <Routes>
-//           {/* Specify the component to render for the root path */}
-//           <Route path="/" element={<Home />} />
-//         </Routes>
-//       </Router>
-//     </>
-//   );
-// }
-
-// export default App;

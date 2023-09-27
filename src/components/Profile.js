@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Profile = () => {
-  // qitu e lexojm userin prej localStorage edhe e kthejm prej JSON n objekt
-  // te login ke objekt e kthym json qe me rujt
   const user = JSON.parse(localStorage.getItem('user'));
-  // tash qitu e ki profile_picture
+
   return (
     <div className="flex items-center justify-center h-screen bg-neutral-700 ">
       <div className="bg-gradient-to-b from-neutral-300 to-neutral-200  shadow-md rounded-lg p-8 w-800">
