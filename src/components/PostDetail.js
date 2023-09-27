@@ -63,7 +63,7 @@ const PostDetail = () => {
   }, [id]);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-neutral-800">
+    <div className="flex items-start justify-evenly h-screen bg-neutral-800">
       <div className="bg-gradient-to-b from-neutral-900 to-transparent rounded-md outline shadow p-11 m-11">
         <h1 className="text-3xl font-bold mb-4 mt-0 text-white">
           {post.title}
@@ -76,8 +76,8 @@ const PostDetail = () => {
           Go back to posts
         </Link>
       </div>
-      <div>
-        <h2 className="text-lg font-bold text-white mb-2">Comments:</h2>
+      <div className="mt-5">
+        <h2 className="text-lg font-bold text-white mb-2 mt-5">Comments:</h2>
         <ul>
           {comments.map((comment) => (
             <li key={comment.id}>

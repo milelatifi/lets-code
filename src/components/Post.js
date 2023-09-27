@@ -1,37 +1,34 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Post = ({ id, title, body }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleExpansion = () => {
-    setIsExpanded((prevState) => !prevState);
-  };
-
   return (
-    <div className="flex flex-row flex-wrap justify-center">
-      <div className="bg-gradient-to-b from-black to-neutral-600  rounded-lg shadow p-6 w-64 m-4">
-        <div className="mb-10">
-          <h2 className="text-2xl text-gray-300 font-bold mb-6 ">
-            {title.substr(0, 40)}
-          </h2>
+    <div
+      className="
+                relative
+                flex w-full max-w-[22rem] flex-col rounded-xl
+                bg-clip-border  shadow-lg m-2
+                bg-gradient-to-b from-black to-neutral-600 text-white
+             "
+    >
+      <div className="p-6">
+        <div className="mb-5 flex items-center justify-between">
+          <h5 className="block font-sans text-xl font-medium leading-snug tracking-normal text-white antialiased">
+            {title.slice(0, 16)}
+          </h5>
         </div>
-        <div className="">
-          <p className="text-white text-sm flex-grow ">
-            {isExpanded ? body : body.substr(0, 60)}...
-          </p>
-        </div>
-        <div className="">
-          <div className=" inline-block mt-4 mb-0">
-            <Link
-              to={`/post/${id}`}
-              className="w-32 h-px  btn bg-green-900 hover:bg-green-700 text-white rounded-md"
-              onClick={toggleExpansion}
-            >
-              See post
-            </Link>
-          </div>
-        </div>
+        <p className="block font-sans text-base font-light leading-relaxed text-gray-300 antialiased">
+          {body.slice(0, 60)}...
+        </p>
+      </div>
+      <div className="relative mt-5 p-2">
+        <Link
+          to={`/post/${id}`}
+          className="
+                    absolute bottom-0 right-0 m-3 btn btn bg-green-900 hover:bg-green-700 rounded-md
+                    "
+        >
+          See post
+        </Link>
       </div>
     </div>
   );
