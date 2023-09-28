@@ -2,7 +2,6 @@
   --primary: #fff;
 }
 .btn {
-  padding: 8px 20px;
   cursor: pointer;
 }
 .btn--primary {
@@ -28,7 +27,7 @@
 }
 .btn--medium:hover,
 .btn--large:hover {
-  background: #fff;
+  background: #c4c2c2;
   color: #2e2d2d;
   transition: all 0.3s ease-out;
 }

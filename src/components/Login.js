@@ -50,7 +50,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen login">
+    <div className="flex flex-col items-center justify-center h-screen login bg-black">
       <div>
         <h3 className="text-2xl  text-white mb-10 mt-0">
           Log into your account!
@@ -105,27 +105,28 @@ const LoginPage = () => {
         <div className="flex justify-center mt-4">
           <button
             type="submit"
-            className="bg-black hover:bg-neutral-800  text-white  font-bold py-3 px-6 rounded-xl focus:outline-none focus:shadow-outline"
+            className=" bg-blue-950 hover:bg-blue-900  text-white  font-bold py-3 px-6 rounded-xl focus:outline-none focus:shadow-outline"
           >
             Sign in
           </button>
         </div>
       </form>
-
       {showSuccessModal && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-50 login">
-          <div className="bg-white p-6 rounded-lg shadow-lg bg-gradient-to-b from-neutral-500 to-neutral-200 ">
-            <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
-            <p className="mb-4">You have successfully logged in!</p>
+          <div className="bg-white p-8 rounded-lg shadow-lg bg-gradient-to-b from-neutral-900 to-neutral-500">
+            <h2 className="text-3xl text-white font-medium mb-6">
+              Congratulations!
+            </h2>
+            <p className="mb-6 text-white">You have successfully logged in!</p>
             <div className="flex justify-center space-x-4">
               <button
-                className="bg-black text-white py-2 px-4 rounded-lg"
+                className="bg-green-900 hover:bg-green-800 text-white py-3 px-6 rounded-lg"
                 onClick={handleCloseSuccessModal}
               >
                 OK
               </button>
               <button
-                className=" bg-green-900 hover:bg-green-700 text-white py-2 px-4 rounded-lg"
+                className="bg-blue-950 hover:bg-blue-900 text-white py-3 px-6 rounded-lg"
                 onClick={() => {
                   window.location.href = '/profile';
                 }}

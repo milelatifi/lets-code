@@ -7,10 +7,10 @@ const AboutPage = () => {
         <h1 className="about-title  mb-0 mt-11">About LetsCode</h1>
       </div>
       <div className="flex-grow flex items-center">
-        <div className="border-black rounded-lg overflow-hidden flex-grow px-2 mt-10">
-          <div className=" bg-gradient-to-b from-neutral-800 to-transparent rounded-lg">
+        <div className="border-black rounded-lg overflow-hidden flex-grow px-4 mt-10">
+          <div className=" bg-neutral-800 rounded-lg">
             <div className="flex flex-col items-center">
-              <p className="about-text m-2">
+              <p className="about-text m-6 mb-0">
                 Welcome to LetsCode, the ultimate platform for developers to
                 showcase their coding powers and find inspiration in diverse
                 coding approaches. Our website provides a vibrant community for

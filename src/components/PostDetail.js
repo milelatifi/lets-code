@@ -64,14 +64,14 @@ const PostDetail = () => {
 
   return (
     <div className="flex items-start justify-evenly h-screen bg-neutral-800">
-      <div className="bg-gradient-to-b from-neutral-900 to-transparent rounded-md outline shadow p-11 m-11">
+      <div className=" bg-gradient-to-b from-black to-neutral-600 rounded-md  shadow p-11 m-11 pt-10">
         <h1 className="text-3xl font-bold mb-4 mt-0 text-white">
           {post.title}
         </h1>
         <p className="text-white text-lg mb-6">{post.body}</p>
         <Link
           to={{ pathname: '/' }}
-          className="btn bg-green-900 hover-bg-green-700 text-white rounded-lg"
+          className="btn  p-4 m-0 bg-blue-950 hover:bg-blue-900 text-white font-medium rounded-lg"
         >
           Go back to posts
         </Link>

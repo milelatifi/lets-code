@@ -24,7 +24,7 @@ const Post = ({ id, title, body }) => {
         <Link
           to={`/post/${id}`}
           className="
-                    absolute bottom-0 right-0 m-3 btn btn bg-green-900 hover:bg-green-700 rounded-md
+                    absolute bottom-0 right-0 m-3 btn p-2 bg-blue-950 hover:bg-blue-900  font-medium rounded-md  
                     "
         >
           See post

@@ -16,6 +16,7 @@
 }
 
 .contact {
+  background-image: url('../public/images/pexels-fauxels-3183183\ \(1\).jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -24,7 +25,7 @@
 .about {
   margin: 0;
   padding: 0;
-  background-image: url('../public/images/pexels-kampus-production-8636603.jpg');
+  background-image: url('../public/images/pexels-fauxels-3183183\ \(1\).jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -61,7 +62,7 @@
 }
 .login,
 .signup {
-  background-image: url('../public/images/background.webp');
+  /* background-image: url('../public/images/background.webp'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
