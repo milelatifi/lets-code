@@ -5,8 +5,8 @@ const Profile = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   return (
-    <div className="flex items-center justify-center h-screen bg-neutral-700 ">
-      <div className="bg-gradient-to-b from-neutral-300 to-neutral-200  shadow-md rounded-lg p-8 w-800">
+    <div className="flex items-center justify-center h-screen bg-neutral-800 ">
+      <div className="bg-gradient-to-b from-neutral-700 to-neutral-500  shadow-md rounded-lg p-8 w-800">
         <h2 className="text-2xl font-bold mb-4">User Profile</h2>
         <div className="mb-4">
           <img
@@ -33,7 +33,7 @@ const Profile = () => {
         <div className="flex justify-center space-x-4">
           <Link
             to={{ pathname: '/' }}
-            className="btn  border rounded-lg bg-black hover:bg-neutral-900 text-white"
+            className="btn p-3 pl-6 pr-6 m-0 bg-blue-950 hover:bg-blue-900 text-white font-medium rounded-lg  "
           >
             back
           </Link>

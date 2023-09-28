@@ -50,14 +50,14 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen login bg-black">
+    <div className="flex flex-col items-center justify-center h-screen login bg-neutral-800 ">
       <div>
         <h3 className="text-2xl  text-white mb-10 mt-0">
           Log into your account!
         </h3>
       </div>
       <form
-        className="bg-gradient-to-b from-black to-neutral-800 shadow-md rounded px-8 pt-6 pb-8 w-1/3"
+        className="bg-gradient-to-b from-black to-neutral-800 shadow-md rounded-lg px-8 pt-6 pb-8 w-1/3"
         onSubmit={handleSubmit}
       >
         <div className="mb-4">
