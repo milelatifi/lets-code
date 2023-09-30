@@ -2,12 +2,14 @@ import '../App.css';
 
 const AboutPage = () => {
   return (
-    <div className="about flex flex-col items-center justify-center h-screen mt-5">
-      <div className=" mb-0 mt-10">
-        <h1 className="about-title  mb-0 mt-11">About LetsCode</h1>
+    <div className="about flex flex-col items-center justify-center h-screen  mt-5">
+      <div className=" mb-10 mt-10">
+        <h1 className="about-title  mb-0 mt-11 about-title text-4xl">
+          About LetsCode
+        </h1>
       </div>
-      <div className="flex-grow flex items-center">
-        <div className="border-black rounded-lg overflow-hidden flex-grow px-4 mt-10">
+      <div className=" flex items-center">
+        <div className="border-black rounded-lg overflow-hidden flex-grow px-4 mt-8">
           <div className=" bg-neutral-800 rounded-lg">
             <div className="flex flex-col items-center">
               <p className="about-text m-6 mb-0">

@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
+import { useLocation } from 'react-router-dom';
 
 function Navbar() {
+  const location = useLocation();
+  const currentRoutePath = location.pathname;
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  const [button] = useState(true);
 
-  const handleClick = () => setClick(!click);
+  const handleClick = () => {
+    if (
+      document.querySelector('.nav-menu').classList.contains('nav-menu-open')
+    ) {
+      document.querySelector('.nav-menu').classList.remove('nav-menu-open');
+    } else {
+      document.querySelector('.nav-menu').classList.add('nav-menu-open');
+    }
+    setClick(!click);
+  };
   const closeMobileMenu = () => setClick(false);
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem('logged_in') === 'true'
@@ -20,18 +32,6 @@ function Navbar() {
     setIsLoggedIn(false);
   };
 
-  const showButton = () => {
-    if (window.innerWidth <= 768) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-  useEffect(() => {
-    showButton();
-  }, []);
-  window.addEventListener('resize', showButton);
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -41,22 +41,67 @@ function Navbar() {
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? 'uil uil-times' : 'uil uil-bars'}></i>
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+        <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/"
+              className={`nav-links ${
+                currentRoutePath === '/' ? 'active' : ''
+              }`}
+              onClick={closeMobileMenu}
+            >
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/contact"
+              className={`nav-links ${
+                currentRoutePath === '/contact' ? 'active' : ''
+              }`}
+              onClick={closeMobileMenu}
+            >
               Contact
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/about"
+              className={`nav-links ${
+                currentRoutePath === '/about' ? 'active' : ''
+              }`}
+              onClick={closeMobileMenu}
+            >
               About
             </Link>
           </li>
+          {button && isLoggedIn !== true && (
+            <li className="nav-item">
+              <Button link="sign-up" buttonStyle="btn--outline">
+                Sign Up
+              </Button>
+            </li>
+          )}
+
+          {button && isLoggedIn !== true && (
+            <li className="nav-item">
+              <Button link="log-in" buttonStyle="btn--outline">
+                Log in
+              </Button>
+            </li>
+          )}
+          {isLoggedIn === true && (
+            <li className="nav-item">
+              <Link
+                to="/log-in"
+                className=" nav-links btn  bg-neutral-900 border-white  text-white btn-mobile "
+                buttonstyle="btn--outline"
+                onClick={logOut}
+              >
+                Log Out
+              </Link>
+            </li>
+          )}
           {isLoggedIn === true && (
             <li className="nav-item">
               <Link
@@ -64,7 +109,6 @@ function Navbar() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                {' '}
                 <img
                   src={user.profile_picture}
                   className="
@@ -72,35 +116,13 @@ function Navbar() {
               w-14
               rounded-full  
               my-1
-              
-          "
+                        "
                   alt=""
                 />
               </Link>
             </li>
           )}
         </ul>
-        {button && isLoggedIn !== true && (
-          <Button link="sign-up" buttonStyle="btn--outline">
-            Sign Up
-          </Button>
-        )}
-
-        {button && isLoggedIn !== true && (
-          <Button link="log-in" buttonStyle="btn--outline">
-            Log in
-          </Button>
-        )}
-        {isLoggedIn === true && (
-          <Link
-            to="/log-in"
-            className="btn  bg-neutral-900 border-white  text-white btn-mobile "
-            buttonstyle="btn--outline"
-            onClick={logOut}
-          >
-            Log Out
-          </Link>
-        )}
       </div>
     </nav>
   );

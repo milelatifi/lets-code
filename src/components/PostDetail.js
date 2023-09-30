@@ -1,45 +1,3 @@
-// import React, { useState, useEffect } from 'react';
-// import { Link, useParams } from 'react-router-dom';
-
-// const PostDetail = () => {
-//   const { id } = useParams('id');
-
-//   const [post, setPost] = useState({});
-//   const [comments, setComments] = useState([]);
-
-//   useEffect(() => {
-//     fetch('https://jsonplaceholder.typicode.com/posts/' + id)
-//       .then((response) => response.json())
-//       .then((data) => setPost(data))
-//       .catch((error) => console.error('Error fetching data:', error));
-
-//     fetch('https://jsonplaceholder.typicode.com/posts/' + id + '/comments')
-//       .then((response) => response.json())
-//       .then((data) => setComments(data))
-//       .catch((error) => console.error('Error fetching data:', error));
-//   }, [id]);
-
-//   return (
-//     <div className="flex items-center justify-center h-screen bg-neutral-800">
-//       <div className="bg-gradient-to-b from-neutral-900 to-transparent rounded-md outline shadow p-11  m-11">
-//         <h1 className="text-3xl font-bold mb-4 mt-0 text-white ">
-//           {post.title}
-//         </h1>
-//         <p className="text-white text-lg mb-6">{post.body}</p>
-//         <Link
-//           to={{ pathname: '/' }}
-//           className="btn bg-green-900 hover:bg-green-700 text-white rounded-lg"
-//         >
-//           Go back to posts
-//         </Link>
-//       </div>
-//       {comments.map((post) => console.log)}
-//     </div>
-//     // comments i shfaq qitu ner post - a po e kupton how will i fetch them? i did it for you already
-//   );
-// };
-
-// export default PostDetail;
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
@@ -55,7 +13,6 @@ const PostDetail = () => {
       .then((data) => setPost(data))
       .catch((error) => console.error('Error fetching data:', error));
 
-    // get post comments
     fetch('https://jsonplaceholder.typicode.com/posts/' + id + '/comments')
       .then((response) => response.json())
       .then((data) => setComments(data))
@@ -63,28 +20,28 @@ const PostDetail = () => {
   }, [id]);
 
   return (
-    <div className="flex items-start justify-evenly h-screen bg-neutral-800">
-      <div className=" bg-gradient-to-b from-black to-neutral-600 rounded-md  shadow p-11 m-11 pt-10">
+    <div className=" post-details flex justify-center items-center bg-neutral-800 h-screen">
+      <div className="bg-gradient-to-b from-black to-neutral-600 rounded-lg shadow p-11 pt-10 m-4">
         <h1 className="text-3xl font-bold mb-4 mt-0 text-white">
           {post.title}
         </h1>
         <p className="text-white text-lg mb-6">{post.body}</p>
         <Link
           to={{ pathname: '/' }}
-          className="btn  p-4 m-0 bg-blue-950 hover:bg-blue-900 text-white font-medium rounded-lg"
+          className="btn p-4 m-0 bg-blue-950 hover:bg-blue-900 text-white font-medium rounded-lg"
         >
           Go back to posts
         </Link>
       </div>
-      <div className="mt-5">
-        <h2 className="text-lg font-bold text-white mb-2 mt-5">Comments:</h2>
+      <div className="m-10 mt-2">
+        <h2 className="text-md font-bold text-white  mt-5">Comments:</h2>
         <ul>
           {comments.map((comment) => (
             <li key={comment.id}>
-              <h3 className="text-md text-neutral-300 font-bold p-2">
+              <h3 className="text-md text-neutral-200 font-medium p-4">
                 {comment.name}
               </h3>
-              <p className="text-neutral-400"> {comment.body}</p>
+              <p className="text-neutral-400 text-sm"> {comment.body}</p>
             </li>
           ))}
         </ul>

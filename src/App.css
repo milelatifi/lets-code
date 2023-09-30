@@ -60,10 +60,12 @@
 .contact-message {
   padding: 6px;
 }
-.login,
-.signup {
-  /* background-image: url('../public/images/background.webp'); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+.about-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 3);
+}
+@media (max-width: 767px) {
+  .post-details {
+    flex-direction: column;
+  }
+  
 }

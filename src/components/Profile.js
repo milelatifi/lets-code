@@ -5,9 +5,9 @@ const Profile = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   return (
-    <div className="flex items-center justify-center h-screen bg-neutral-800 ">
-      <div className="bg-gradient-to-b from-neutral-700 to-neutral-500  shadow-md rounded-lg p-8 w-800">
-        <h2 className="text-2xl font-bold mb-4">User Profile</h2>
+    <div className="flex items-center justify-center bg-neutral-800 pt-11 pb-11 h-screen ">
+      <div className="bg-gradient-to-b from-neutral-700 to-neutral-500  shadow-md rounded-lg p-8 w-800 mt-10">
+        <h2 className="text-2xl font-bold mb-4 text-white">User Profile</h2>
         <div className="mb-4">
           <img
             src={user.profile_picture}
@@ -22,7 +22,7 @@ const Profile = () => {
             alt=""
           />
         </div>
-        <div className="mb-4">
+        <div className="mb-4 text-white">
           <p>
             <strong>Full Name:</strong> {user.name} {user.surname}
           </p>

@@ -27,7 +27,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center  pt-10 pb-16 signup bg-neutral-800">
+    <div className="flex justify-center items-center  pt-10 pb-16 signup bg-neutral-800 h-screen">
       <div className="flex flex-col justify-center items-center">
         <div className="text-2xl  text-white mb-10 mt-10">
           Register so you can be a part of us!

@@ -6,7 +6,7 @@ const Post = ({ id, title, body }) => {
       className="
                 relative
                 flex w-full max-w-[22rem] flex-col rounded-xl
-                bg-clip-border  shadow-lg m-2
+                bg-clip-border  shadow-lg m-2 mb-8
                 bg-gradient-to-b from-black to-neutral-600 text-white
              "
     >
