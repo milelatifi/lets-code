@@ -11,7 +11,7 @@ const LoginPage = () => {
       surname: 'Doe',
       email: 'test@gmail.com',
       password: '123456',
-      profile_picture: 'public/images/avatar-1.jpg',
+      profile_picture: 'https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png',
     },
     {
       name: 'Pete',
@@ -26,7 +26,7 @@ const LoginPage = () => {
       surname: 'Smith',
       email: 'user3@gmail.com',
       password: '123456',
-      profile_picture: 'public/images/avatar-1.jpg',
+      profile_picture: 'https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png',
     },
   ];
   const handleSubmit = (e) => {
